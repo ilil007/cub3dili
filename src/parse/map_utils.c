@@ -6,7 +6,7 @@
 /*   By: liliu <liliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 21:55:46 by liliu             #+#    #+#             */
-/*   Updated: 2025/11/29 15:09:24 by liliu            ###   ########.fr       */
+/*   Updated: 2025/11/29 20:50:48 by liliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,24 @@ int	count_map_lines(char **lines, int start)
 	return (count);
 }
 
+int	check_no_content_after_map(char **lines, int map_start, int map_count)
+{
+	int		i;
+	char	*p;
+
+	i = map_start + map_count;
+	while (lines[i])
+	{
+		p = lines[i];
+		while (*p && (*p == ' ' || *p == '\t' || *p == '\n'))
+			p++;
+		if (*p && *p != '\n' && *p != '\0')
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
 int	get_max_width(char **grid)
 {
 	int	i;
@@ -58,69 +76,4 @@ int	get_max_width(char **grid)
 		i++;
 	}
 	return (max);
-}
-
-char	**extract_map(char **lines, int start, int count)
-{
-	char    **map;
-	int     i;
-	int     j;
-	int     max;
-	int     len;
-	char    *src;
-	char    *p;
-
-	if (count <= 0)
-		return (NULL);
-	max = 0;
-	i = 0;
-	while (i < count)
-	{
-		src = lines[start + i];
-		p = (char *)src;
-		while (*p == ' ' || *p == '\t')
-			p++;
-		len = 0;
-		while (p[len] && p[len] != '\n')
-			len++;
-		if (len > max)
-			max = len;
-		i++;
-	}
-	map = malloc(sizeof(char *) * (count + 1));
-	if (!map)
-		return (NULL);
-	i = 0;
-	while (i < count)
-	{
-		src = lines[start + i];
-		p = (char *)src;
-		while (*p == ' ' || *p == '\t')
-			p++;
-		len = 0;
-		while (p[len] && p[len] != '\n')
-			len++;
-		map[i] = malloc(max + 1);
-		if (!map[i])
-		{
-			while (i > 0)
-				free(map[--i]);
-			return (free(map), NULL);
-		}
-		j = 0;
-		while (j < len)
-		{
-			if (p[j] == ' ')
-				map[i][j] = '1';
-			else
-				map[i][j] = p[j];
-			j++;
-		}
-		while (j < max)
-			map[i][j++] = '1';
-		map[i][j] = '\0';
-		i++;
-	}
-	map[i] = NULL;
-	return (map);
 }

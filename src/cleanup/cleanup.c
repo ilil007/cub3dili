@@ -18,6 +18,14 @@ void	free_map(t_map *map)
 
 	if (!map)
 		return ;
+	if (map->n_texture)
+		free(map->n_texture);
+	if (map->s_texture)
+		free(map->s_texture);
+	if (map->w_texture)
+		free(map->w_texture);
+	if (map->e_texture)
+		free(map->e_texture);
 	if (map->grid)
 	{
 		i = 0;

@@ -6,7 +6,7 @@
 /*   By: liliu <liliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 21:56:13 by liliu             #+#    #+#             */
-/*   Updated: 2025/11/29 17:23:28 by liliu            ###   ########.fr       */
+/*   Updated: 2025/11/29 20:52:20 by liliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,31 +41,56 @@ char	*parse_texture_path(char *line)
 	return (path);
 }
 
-void	parse_textures(t_map *map, char **lines, int *map_start)
+static int	set_texture(char **dst, char *line)
 {
-	int	i;
+	if (*dst)
+		return (0);
+	*dst = parse_texture_path(line);
+	return (1);
+}
+
+static int	parse_texture_line(t_map *map, char *line, char *p)
+{
+	if (ft_strncmp(p, "NO ", 3) == 0)
+		return (set_texture(&map->n_texture, line));
+	else if (ft_strncmp(p, "SO ", 3) == 0)
+		return (set_texture(&map->s_texture, line));
+	else if (ft_strncmp(p, "WE ", 3) == 0)
+		return (set_texture(&map->w_texture, line));
+	else if (ft_strncmp(p, "EA ", 3) == 0)
+		return (set_texture(&map->e_texture, line));
+	return (1);
+}
+
+static int	all_textures_set(t_map *map)
+{
+	if (!map->n_texture || !map->s_texture)
+		return (0);
+	if (!map->w_texture || !map->e_texture)
+		return (0);
+	return (1);
+}
+
+int	parse_textures(t_map *map, char **lines, int *map_start)
+{
+	int		i;
+	char	*p;
 
 	i = 0;
 	*map_start = 0;
 	while (lines[i])
 	{
-		char *p = lines[i];
+		p = lines[i];
 		while (*p && (*p == ' ' || *p == '\t'))
 			p++;
-		if (ft_strncmp(p, "NO ", 3) == 0)
-			map->n_texture = parse_texture_path(lines[i]);
-		else if (ft_strncmp(p, "SO ", 3) == 0)
-			map->s_texture = parse_texture_path(lines[i]);
-		else if (ft_strncmp(p, "WE ", 3) == 0)
-			map->w_texture = parse_texture_path(lines[i]);
-		else if (ft_strncmp(p, "EA ", 3) == 0)
-			map->e_texture = parse_texture_path(lines[i]);
-		else if (is_map_line(lines[i]))
+		if (is_map_line(lines[i]))
 		{
 			*map_start = i;
 			break ;
 		}
+		if (!parse_texture_line(map, lines[i], p))
+			return (0);
 		i++;
 	}
+	return (all_textures_set(map));
 }
-

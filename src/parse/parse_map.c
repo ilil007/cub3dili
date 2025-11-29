@@ -6,53 +6,82 @@
 /*   By: liliu <liliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 21:56:29 by liliu             #+#    #+#             */
-/*   Updated: 2025/11/29 19:28:34 by liliu            ###   ########.fr       */
+/*   Updated: 2025/11/29 20:50:10 by liliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
+void	free_all_lines(char **lines, int count)
+{
+	int	i;
+
+	i = 0;
+	while (i < count)
+	{
+		free(lines[i]);
+		i++;
+	}
+	free(lines);
+}
+
+static t_map	*init_map_struct(char **all_lines, int total_lines)
+{
+	t_map	*map;
+
+	map = malloc(sizeof(t_map));
+	if (!map)
+	{
+		free_all_lines(all_lines, total_lines);
+		return (NULL);
+	}
+	ft_memset(map, 0, sizeof(t_map));
+	return (map);
+}
+
+static t_map	*parse_fail(char **lines, int total, t_map *map)
+{
+	free_all_lines(lines, total);
+	free_map(map);
+	return (NULL);
+}
+
+static int	parse_map_grid(t_map *map, char **all_lines, int map_start)
+{
+	int	map_count;
+
+	map_count = count_map_lines(all_lines, map_start);
+	if (map_count == 0)
+		return (0);
+	if (!check_no_content_after_map(all_lines, map_start, map_count))
+		return (0);
+	map->grid = extract_map(all_lines, map_start, map_count);
+	map->height = map_count;
+	map->width = get_max_width(map->grid);
+	return (1);
+}
 
 t_map	*parse_map(char *filename)
 {
-	t_map *map;
-	char **all_lines;
-	int total_lines;
-	int map_start;
-	int map_count;
+	t_map	*map;
+	char	**all_lines;
+	int		total_lines;
+	int		map_start;
 
 	all_lines = read_file_lines(filename, &total_lines);
 	if (!all_lines)
 		return (NULL);
-	map = malloc(sizeof(t_map));
+	map = init_map_struct(all_lines, total_lines);
 	if (!map)
 		return (NULL);
-	ft_memset(map, 0, sizeof(t_map));
-	parse_textures(map, all_lines, &map_start);
-	map_count = count_map_lines(all_lines, map_start);
-	if (map_count == 0)
-	{
-		free(map);
-		return (NULL);
-	}
-	map->grid = extract_map(all_lines, map_start, map_count);
-	map->height = map_count;
-	map->width = get_max_width(map->grid);
+	if (!parse_textures(map, all_lines, &map_start))
+		return (parse_fail(all_lines, total_lines, map));
+	if (!parse_map_grid(map, all_lines, map_start))
+		return (parse_fail(all_lines, total_lines, map));
 	map->floor_color = 0x404040;
 	map->ceiling_color = 0x87CEEB;
-	while (total_lines-- > 0)
-		free(all_lines[total_lines]);
-	free(all_lines);
+	if (!parse_colors(map, all_lines))
+		return (parse_fail(all_lines, total_lines, map));
+	free_all_lines(all_lines, total_lines);
 	return (map);
 }
-
-// code a function for parsing colors and checking errors in the file
-
-// step1: find "F " or "C " in the file
-// step2: "jump spaces and tabs"
-// step3: record what is not spaces and tabs
-// step4: split by ','
-// step5: check if there are 3 parts
-// step6: check each part is 3 characters max and is digit only
-// step7: convert to int and check range 0-255
-// step8: store color in map->floor_color or ceiling_color

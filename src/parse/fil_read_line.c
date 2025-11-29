@@ -6,7 +6,7 @@
 /*   By: liliu <liliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 22:01:03 by liliu             #+#    #+#             */
-/*   Updated: 2025/11/29 15:21:34 by liliu            ###   ########.fr       */
+/*   Updated: 2025/11/29 20:52:49 by liliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ char	**read_lines_from_fd(int fd, int *height)
 
 char	**read_file_lines(char *filename, int *height)
 {
-	int fd;
-	char **lines;
+	int		fd;
+	char	**lines;
 
 	fd = open_file(filename);
 	if (fd < 0)

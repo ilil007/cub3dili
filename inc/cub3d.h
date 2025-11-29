@@ -6,7 +6,7 @@
 /*   By: liliu <liliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 20:58:59 by liliu             #+#    #+#             */
-/*   Updated: 2025/11/29 17:23:35 by liliu            ###   ########.fr       */
+/*   Updated: 2025/11/29 20:52:22 by liliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -215,14 +215,19 @@ void    error_exit(char *msg);
 
 /*---------------------------------------------------------*/
 /* Map parsing prototypes (public) */
-int     is_map_line(char *line);
-int     count_map_lines(char **lines, int start);
-int     get_max_width(char **grid);
-char    **extract_map(char **lines, int start, int count);
-void    parse_textures(t_map *map, char **lines, int *map_start);
-int     open_file(char *filename);
-char    **read_file_lines(char *filename, int *total_lines);
-t_map   *parse_map(char *filename);
+int		is_map_line(char *line);
+int		count_map_lines(char **lines, int start);
+int		check_no_content_after_map(char **lines, int map_start, int map_count);
+int		get_max_width(char **grid);
+int		get_map_max_width(char **lines, int start, int count);
+char	*copy_map_line(char *line, int max);
+char	**extract_map(char **lines, int start, int count);
+int		parse_textures(t_map *map, char **lines, int *map_start);
+int		parse_colors(t_map *map, char **lines);
+int		open_file(char *filename);
+char	**read_file_lines(char *filename, int *total_lines);
+void	free_all_lines(char **lines, int count);
+t_map	*parse_map(char *filename);
 
 /*---------------------------------------------------------*/
 /* Map validation */

@@ -6,7 +6,7 @@
 /*   By: liliu <liliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 21:28:38 by liliu             #+#    #+#             */
-/*   Updated: 2025/11/27 21:28:49 by liliu            ###   ########.fr       */
+/*   Updated: 2025/11/29 21:13:46 by liliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int	calc_tex_x(t_ray *ray, t_texture *texture, t_player *player)
 	else
 		wall_x = player->x + ray->distance * ray->dir_x;
 	wall_x -= floor(wall_x);
-
 	tex_x = (int)(wall_x * (double)texture->width);
 	if ((ray->side == 0 && ray->dir_x > 0)
 		|| (ray->side == 1 && ray->dir_y < 0))

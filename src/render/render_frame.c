@@ -6,7 +6,7 @@
 /*   By: liliu <liliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 22:20:51 by liliu             #+#    #+#             */
-/*   Updated: 2025/11/27 22:26:05 by liliu            ###   ########.fr       */
+/*   Updated: 2025/11/29 21:10:24 by liliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,12 @@ void	print_debug_info_first_frame(t_game *game)
 
 	printf("\n=== DEBUG INFO (Frame 0) ===\n");
 	printf("Player pos: (%.2f, %.2f)\n", game->player->x, game->player->y);
-	printf("Player dir: (%.2f, %.2f)\n", game->player->dir_x, game->player->dir_y);
-	printf("Player plane: (%.2f, %.2f)\n", game->player->plane_x, game->player->plane_y);
-	printf("Map size: %d x %d\n", game->map->width, game->map->height);
+	printf("Player dir: (%.2f, %.2f)\n", \
+			game->player->dir_x, game->player->dir_y);
+	printf("Player plane: (%.2f, %.2f)\n", \
+			game->player->plane_x, game->player->plane_y);
+	printf("Map size: %d x %d\n", \
+			game->map->width, game->map->height);
 	printf("Screen: %d x %d\n", SCREEN_WIDTH, SCREEN_HEIGHT);
 	printf("\nFirst 5 rows of map:\n");
 	y = 0;

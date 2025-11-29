@@ -6,15 +6,16 @@
 /*   By: liliu <liliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 21:37:00 by liliu             #+#    #+#             */
-/*   Updated: 2025/11/27 22:40:25 by liliu            ###   ########.fr       */
+/*   Updated: 2025/11/29 21:13:05 by liliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
 //draw_wall_strip(game, &ray, x);
-void	draw_wall_loop(t_game *game, t_ray *ray, int x,
-				t_texture *texture, int draw_start, int draw_end, int line_height)
+void	draw_wall_loop(t_game *game, t_ray *ray, int x, \
+				t_texture *texture, int draw_start, \
+				int draw_end, int line_height)
 {
 	double	step;
 	double	tex_pos;

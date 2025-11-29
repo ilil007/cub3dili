@@ -6,7 +6,7 @@
 /*   By: liliu <liliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 20:56:18 by liliu             #+#    #+#             */
-/*   Updated: 2025/11/27 21:02:41 by liliu            ###   ########.fr       */
+/*   Updated: 2025/11/29 21:14:11 by liliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 static void	init_delta_dist(t_ray *ray)
 {
-	// 防止除以零
 	if (ray->dir_x == 0)
 		ray->delta_dist_x = 1e30;
 	else

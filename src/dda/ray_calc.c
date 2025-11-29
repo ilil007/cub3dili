@@ -6,7 +6,7 @@
 /*   By: liliu <liliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 20:56:49 by liliu             #+#    #+#             */
-/*   Updated: 2025/11/27 21:03:03 by liliu            ###   ########.fr       */
+/*   Updated: 2025/11/29 21:15:02 by liliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,15 @@
 
 void	calculate_wall_distance(t_game *game, t_ray *ray)
 {
-	// 计算垂直距离
 	if (ray->side == 0)
 		ray->perp_wall_dist = (ray->map_x - game->player->x
 				+ (1 - ray->step_x) / 2.0) / ray->dir_x;
 	else
 		ray->perp_wall_dist = (ray->map_y - game->player->y
 				+ (1 - ray->step_y) / 2.0) / ray->dir_y;
-	// 防止极小值
 	if (ray->perp_wall_dist < 0.1)
 		ray->perp_wall_dist = 0.1;
 	ray->distance = ray->perp_wall_dist;
-	// 确定墙类型
 	if (ray->side == 0)
 	{
 		if (ray->step_x > 0)

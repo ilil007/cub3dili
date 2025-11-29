@@ -6,7 +6,7 @@
 /*   By: liliu <liliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 21:56:29 by liliu             #+#    #+#             */
-/*   Updated: 2025/11/29 17:23:24 by liliu            ###   ########.fr       */
+/*   Updated: 2025/11/29 19:28:34 by liliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,3 +45,14 @@ t_map	*parse_map(char *filename)
 	free(all_lines);
 	return (map);
 }
+
+// code a function for parsing colors and checking errors in the file
+
+// step1: find "F " or "C " in the file
+// step2: "jump spaces and tabs"
+// step3: record what is not spaces and tabs
+// step4: split by ','
+// step5: check if there are 3 parts
+// step6: check each part is 3 characters max and is digit only
+// step7: convert to int and check range 0-255
+// step8: store color in map->floor_color or ceiling_color

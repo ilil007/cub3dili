@@ -1,0 +1,221 @@
+=== GOOD MAPS ===
+=== maps/good/cheese_maze.cub ===
+maps/good/cheese_maze.cub: REJECTED
+--- output ---
+
+=== maps/good/creepy.cub ===
+maps/good/creepy.cub: REJECTED
+--- output ---
+
+=== maps/good/dungeon.cub ===
+maps/good/dungeon.cub: REJECTED
+--- output ---
+
+=== maps/good/library.cub ===
+maps/good/library.cub: REJECTED
+--- output ---
+
+=== maps/good/matrix.cub ===
+maps/good/matrix.cub: REJECTED
+--- output ---
+
+=== maps/good/sad_face.cub ===
+maps/good/sad_face.cub: REJECTED
+--- output ---
+
+=== maps/good/square_map.cub ===
+maps/good/square_map.cub: REJECTED
+--- output ---
+
+=== maps/good/subject_map.cub ===
+maps/good/subject_map.cub: REJECTED
+--- output ---
+
+=== maps/good/test_map.cub ===
+maps/good/test_map.cub: REJECTED
+--- output ---
+
+=== maps/good/test_map_hole.cub ===
+maps/good/test_map_hole.cub: REJECTED
+--- output ---
+
+=== maps/good/test_pos_bottom.cub ===
+maps/good/test_pos_bottom.cub: REJECTED
+--- output ---
+
+=== maps/good/test_pos_left.cub ===
+maps/good/test_pos_left.cub: REJECTED
+--- output ---
+
+=== maps/good/test_pos_right.cub ===
+maps/good/test_pos_right.cub: REJECTED
+--- output ---
+
+=== maps/good/test_pos_top.cub ===
+maps/good/test_pos_top.cub: REJECTED
+--- output ---
+
+=== maps/good/test_textures.cub ===
+maps/good/test_textures.cub: REJECTED
+--- output ---
+
+=== maps/good/test_whitespace.cub ===
+maps/good/test_whitespace.cub: REJECTED
+--- output ---
+
+=== maps/good/works.cub ===
+maps/good/works.cub: REJECTED
+--- output ---
+
+=== BAD MAPS (recheck) ===
+=== maps/bad/color_invalid_rgb.cub ===
+maps/bad/color_invalid_rgb.cub: REJECTED
+--- output ---
+
+=== maps/bad/color_missing_ceiling_rgb.cub ===
+maps/bad/color_missing_ceiling_rgb.cub: REJECTED
+--- output ---
+
+=== maps/bad/color_missing.cub ===
+maps/bad/color_missing.cub: REJECTED
+--- output ---
+
+=== maps/bad/color_missing_floor_rgb.cub ===
+maps/bad/color_missing_floor_rgb.cub: REJECTED
+--- output ---
+
+=== maps/bad/color_none.cub ===
+maps/bad/color_none.cub: REJECTED
+--- output ---
+
+=== maps/bad/empty.cub ===
+maps/bad/empty.cub: REJECTED
+--- output ---
+Error
+Error
+Failed to parse map
+
+=== maps/bad/file_letter_end.cub ===
+maps/bad/file_letter_end.cub: REJECTED
+--- output ---
+
+=== maps/bad/map_first.cub ===
+maps/bad/map_first.cub: REJECTED
+--- output ---
+Error
+Failed to load textures
+
+=== maps/bad/map_middle.cub ===
+maps/bad/map_middle.cub: REJECTED
+--- output ---
+
+=== maps/bad/map_missing.cub ===
+maps/bad/map_missing.cub: REJECTED
+--- output ---
+Error
+Error
+Failed to parse map
+
+=== maps/bad/map_only.cub ===
+maps/bad/map_only.cub: REJECTED
+--- output ---
+Error
+Failed to load textures
+
+=== maps/bad/map_too_small.cub ===
+maps/bad/map_too_small.cub: REJECTED
+--- output ---
+Error
+Error
+Invalid map
+
+=== maps/bad/player_multiple.cub ===
+maps/bad/player_multiple.cub: REJECTED
+--- output ---
+Error
+Error
+Invalid map
+
+=== maps/bad/player_none.cub ===
+maps/bad/player_none.cub: REJECTED
+--- output ---
+Error
+Error
+Invalid map
+
+=== maps/bad/player_on_edge.cub ===
+maps/bad/player_on_edge.cub: REJECTED
+--- output ---
+Error
+Error
+Invalid map
+
+=== maps/bad/textures_dir.cub ===
+maps/bad/textures_dir.cub: REJECTED
+--- output ---
+Error
+Failed to load textures
+
+=== maps/bad/textures_duplicates.cub ===
+maps/bad/textures_duplicates.cub: REJECTED
+--- output ---
+
+=== maps/bad/textures_invalid.cub ===
+maps/bad/textures_invalid.cub: REJECTED
+--- output ---
+Error
+Failed to load textures
+
+=== maps/bad/textures_missing.cub ===
+maps/bad/textures_missing.cub: REJECTED
+--- output ---
+Error
+Failed to load textures
+
+=== maps/bad/textures_none.cub ===
+maps/bad/textures_none.cub: REJECTED
+--- output ---
+Error
+Failed to load textures
+
+=== maps/bad/textures_not_xpm.cub ===
+maps/bad/textures_not_xpm.cub: REJECTED
+--- output ---
+Error
+Failed to load textures
+
+=== maps/bad/wall_hole_east.cub ===
+maps/bad/wall_hole_east.cub: REJECTED
+--- output ---
+Error
+Error
+Invalid map
+
+=== maps/bad/wall_hole_north.cub ===
+maps/bad/wall_hole_north.cub: REJECTED
+--- output ---
+Error
+Error
+Invalid map
+
+=== maps/bad/wall_hole_south.cub ===
+maps/bad/wall_hole_south.cub: REJECTED
+--- output ---
+Error
+Error
+Invalid map
+
+=== maps/bad/wall_hole_west.cub ===
+maps/bad/wall_hole_west.cub: REJECTED
+--- output ---
+Error
+Error
+Invalid map
+
+=== maps/bad/wall_none.cub ===
+maps/bad/wall_none.cub: REJECTED
+--- output ---
+Error
+Error
+Invalid map
+

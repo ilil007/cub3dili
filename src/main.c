@@ -6,7 +6,7 @@
 /*   By: liliu <liliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 10:21:56 by hanchen           #+#    #+#             */
-/*   Updated: 2025/11/29 15:22:41 by liliu            ###   ########.fr       */
+/*   Updated: 2025/11/29 19:05:14 by liliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,22 @@ int	load_textures(t_game *game)
 	return (1);
 }
 
+/* Verify texture file extension and readability without MLX */
+int	texture_files_valid(t_map *map)
+{
+	if (!map)
+		return (0);
+	if (!check_file_extension(map->n_texture, ".xpm") || access(map->n_texture, R_OK) != 0)
+		return (0);
+	if (!check_file_extension(map->s_texture, ".xpm") || access(map->s_texture, R_OK) != 0)
+		return (0);
+	if (!check_file_extension(map->e_texture, ".xpm") || access(map->e_texture, R_OK) != 0)
+		return (0);
+	if (!check_file_extension(map->w_texture, ".xpm") || access(map->w_texture, R_OK) != 0)
+		return (0);
+	return (1);
+}
+
 /* Main entry */
 int	main(int ac, char **av)
 {
@@ -123,6 +139,9 @@ int	main(int ac, char **av)
 	if (!game.player)
 		error_exit("Failed to allocate player");
 	init_player_from_map(&game);
+	/* Pre-check texture files before initializing MLX */
+	if (!texture_files_valid(game.map))
+		error_exit("Failed to load textures");
 	if (!init_mlx(&game))
 		error_exit("Failed to initialize MLX");
 	if (!load_textures(&game))

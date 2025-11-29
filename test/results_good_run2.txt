@@ -1,0 +1,68 @@
+=== maps/good/cheese_maze.cub ===
+maps/good/cheese_maze.cub: FAILED
+--- output ---
+
+=== maps/good/creepy.cub ===
+maps/good/creepy.cub: FAILED
+--- output ---
+
+=== maps/good/dungeon.cub ===
+maps/good/dungeon.cub: FAILED
+--- output ---
+
+=== maps/good/library.cub ===
+maps/good/library.cub: FAILED
+--- output ---
+
+=== maps/good/matrix.cub ===
+maps/good/matrix.cub: FAILED
+--- output ---
+
+=== maps/good/sad_face.cub ===
+maps/good/sad_face.cub: FAILED
+--- output ---
+
+=== maps/good/square_map.cub ===
+maps/good/square_map.cub: FAILED
+--- output ---
+
+=== maps/good/subject_map.cub ===
+maps/good/subject_map.cub: FAILED
+--- output ---
+
+=== maps/good/test_map.cub ===
+maps/good/test_map.cub: FAILED
+--- output ---
+
+=== maps/good/test_map_hole.cub ===
+maps/good/test_map_hole.cub: FAILED
+--- output ---
+
+=== maps/good/test_pos_bottom.cub ===
+maps/good/test_pos_bottom.cub: FAILED
+--- output ---
+
+=== maps/good/test_pos_left.cub ===
+maps/good/test_pos_left.cub: FAILED
+--- output ---
+
+=== maps/good/test_pos_right.cub ===
+maps/good/test_pos_right.cub: FAILED
+--- output ---
+
+=== maps/good/test_pos_top.cub ===
+maps/good/test_pos_top.cub: FAILED
+--- output ---
+
+=== maps/good/test_textures.cub ===
+maps/good/test_textures.cub: FAILED
+--- output ---
+
+=== maps/good/test_whitespace.cub ===
+maps/good/test_whitespace.cub: FAILED
+--- output ---
+
+=== maps/good/works.cub ===
+maps/good/works.cub: FAILED
+--- output ---
+

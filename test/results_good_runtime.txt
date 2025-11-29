@@ -1,0 +1,97 @@
+=== maps/good/cheese_maze.cub ===
+maps/good/cheese_maze.cub: REJECTED
+--- output ---
+
+=== maps/good/creepy.cub ===
+maps/good/creepy.cub: REJECTED
+--- output ---
+
+=== maps/good/dungeon.cub ===
+maps/good/dungeon.cub: REJECTED
+--- output ---
+
+=== maps/good/library.cub ===
+maps/good/library.cub: REJECTED
+--- output ---
+
+=== maps/good/matrix.cub ===
+maps/good/matrix.cub: REJECTED
+--- output ---
+
+=== maps/good/sad_face.cub ===
+maps/good/sad_face.cub: REJECTED
+--- output ---
+
+=== maps/good/square_map.cub ===
+maps/good/square_map.cub: REJECTED
+--- output ---
+
+=== maps/good/subject_map.cub ===
+maps/good/subject_map.cub: REJECTED
+--- output ---
+
+=== maps/good/test_map.cub ===
+maps/good/test_map.cub: REJECTED
+--- output ---
+
+=== maps/good/test_map_hole.cub ===
+maps/good/test_map_hole.cub: REJECTED
+--- output ---
+
+=== maps/good/test_pos_bottom.cub ===
+maps/good/test_pos_bottom.cub: REJECTED
+--- output ---
+
+=== maps/good/test_pos_left.cub ===
+maps/good/test_pos_left.cub: REJECTED
+--- output ---
+
+=== maps/good/test_pos_right.cub ===
+maps/good/test_pos_right.cub: REJECTED
+--- output ---
+
+=== maps/good/test_pos_top.cub ===
+maps/good/test_pos_top.cub: REJECTED
+--- output ---
+
+=== maps/good/test_textures.cub ===
+maps/good/test_textures.cub: REJECTED
+--- output ---
+
+=== maps/good/test_whitespace.cub ===
+maps/good/test_whitespace.cub: REJECTED
+--- output ---
+
+=== maps/good/works.cub ===
+maps/good/works.cub: OPENED
+--- output ---
+Initializing MLX...
+MLX initialized: 1024x768
+Setting up hooks...
+Window pointer: 0x55abf2922de0
+Hooks set up successfully
+
+=== DEBUG INFO (Frame 0) ===
+Player pos: (2.50, 1.50)
+Player dir: (0.00, 1.00)
+Player plane: (-0.66, 0.00)
+Map size: 25 x 6
+Screen: 1024 x 768
+
+First 5 rows of map:
+Row 0: [1111111111111111111111111]
+Row 1: [10S0110000100000000000001]
+Row 2: [1000110000000000111111001]
+Row 3: [1000110000000000110001001]
+Row 4: [1000000000100000000001001]
+...
+
+Center ray:
+  camera_x: 0.000
+  ray dir: (0.000, 1.000)
+  hit: 1 at (2, 5)
+  distance: 3.50
+  wall_type: 0, side: 1
+
+First frame rendered successfully!
+

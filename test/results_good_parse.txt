@@ -1,0 +1,17 @@
+maps/good/cheese_maze.cub: PARSE OK, VALIDATE OK
+maps/good/creepy.cub: PARSE OK, VALIDATE OK
+maps/good/dungeon.cub: PARSE OK, VALIDATE OK
+maps/good/library.cub: PARSE OK, VALIDATE OK
+maps/good/matrix.cub: PARSE OK, VALIDATE OK
+maps/good/sad_face.cub: PARSE OK, VALIDATE OK
+maps/good/square_map.cub: PARSE OK, VALIDATE OK
+maps/good/subject_map.cub: PARSE OK, VALIDATE OK
+maps/good/test_map.cub: PARSE OK, VALIDATE OK
+maps/good/test_map_hole.cub: PARSE OK, VALIDATE OK
+maps/good/test_pos_bottom.cub: PARSE OK, VALIDATE OK
+maps/good/test_pos_left.cub: PARSE OK, VALIDATE OK
+maps/good/test_pos_right.cub: PARSE OK, VALIDATE OK
+maps/good/test_pos_top.cub: PARSE OK, VALIDATE OK
+maps/good/test_textures.cub: PARSE OK, VALIDATE OK
+maps/good/test_whitespace.cub: PARSE OK, VALIDATE OK
+maps/good/works.cub: PARSE OK, VALIDATE OK

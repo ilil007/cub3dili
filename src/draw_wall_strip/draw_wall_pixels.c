@@ -14,11 +14,7 @@
 
 void	draw_wall_pixels(t_game *game, t_ray *ray, int x, t_texture *texture)
 {
-	int	line_height;
-	int	draw_start;
-	int	draw_end;
-
-	calc_draw_range(ray, &line_height, &draw_start, &draw_end);
-	draw_ceiling_floor(game, x, draw_start, draw_end);
-	draw_wall_loop(game, ray, x, texture, draw_start, draw_end, line_height);
+	calc_draw_range(ray);
+	draw_ceiling_floor(game, x, ray->draw_start, ray->draw_end);
+	draw_wall_loop(game, ray, x, texture);
 }

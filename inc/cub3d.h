@@ -6,7 +6,7 @@
 /*   By: liliu <liliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 20:58:59 by liliu             #+#    #+#             */
-/*   Updated: 2025/11/29 20:52:22 by liliu            ###   ########.fr       */
+/*   Updated: 2025/12/01 15:47:45 by liliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -151,8 +151,7 @@ typedef struct s_game
 void    draw_ceiling_floor(t_game *game, int x, int draw_start, int draw_end);
 void    draw_wall_strip(t_game *game, t_ray *ray, int x);
 void    draw_wall_pixels(t_game *game, t_ray *ray, int x, t_texture *texture);
-void    draw_wall_loop(t_game *game, t_ray *ray, int x,
-				t_texture *texture, int draw_start, int draw_end, int line_height);
+void    draw_wall_loop(t_game *game, t_ray *ray, int x, t_texture *texture);
 
 /* parameters for rendering a single wall column (kept for clarity) */
 typedef struct s_wall_render_params
@@ -168,8 +167,7 @@ typedef struct s_wall_render_params
 }   t_wall_render_params;
 
 /* draw helper prototypes */
-void    calc_draw_range(t_ray *ray, int *line_height,
-				int *draw_start, int *draw_end);
+void    calc_draw_range(t_ray *ray);
 
 /* Helpers */
 t_texture   *select_texture(t_game *game, t_ray *ray);
@@ -212,6 +210,13 @@ void    update_player(t_game *game);
 /*---------------------------------------------------------*/
 void    error_exit(char *msg);
 
+/*---------------------------------------------------------*/
+/* Game initialization */
+int		check_file_extension(char *filename, char *ext);
+void	init_game(t_game *game);
+void	init_player_from_map(t_game *game);
+int		load_textures(t_game *game);
+int		texture_files_valid(t_map *map);
 
 /*---------------------------------------------------------*/
 /* Map parsing prototypes (public) */

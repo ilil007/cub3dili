@@ -1,0 +1,26 @@
+maps/bad/color_invalid_rgb.cub: PARSE OK, VALIDATE OK
+maps/bad/color_missing_ceiling_rgb.cub: PARSE OK, VALIDATE OK
+maps/bad/color_missing.cub: PARSE OK, VALIDATE OK
+maps/bad/color_missing_floor_rgb.cub: PARSE OK, VALIDATE OK
+maps/bad/color_none.cub: PARSE OK, VALIDATE OK
+maps/bad/empty.cub: PARSE FAILED
+maps/bad/file_letter_end.cub: PARSE OK, VALIDATE OK
+maps/bad/map_first.cub: PARSE OK, VALIDATE OK
+maps/bad/map_middle.cub: PARSE OK, VALIDATE OK
+maps/bad/map_missing.cub: PARSE FAILED
+maps/bad/map_only.cub: PARSE OK, VALIDATE OK
+maps/bad/map_too_small.cub: PARSE OK, VALIDATE FAIL
+maps/bad/player_multiple.cub: PARSE OK, VALIDATE FAIL
+maps/bad/player_none.cub: PARSE OK, VALIDATE FAIL
+maps/bad/player_on_edge.cub: PARSE OK, VALIDATE FAIL
+maps/bad/textures_dir.cub: PARSE OK, VALIDATE OK
+maps/bad/textures_duplicates.cub: PARSE OK, VALIDATE OK
+maps/bad/textures_invalid.cub: PARSE OK, VALIDATE OK
+maps/bad/textures_missing.cub: PARSE OK, VALIDATE OK
+maps/bad/textures_none.cub: PARSE OK, VALIDATE OK
+maps/bad/textures_not_xpm.cub: PARSE OK, VALIDATE OK
+maps/bad/wall_hole_east.cub: PARSE OK, VALIDATE FAIL
+maps/bad/wall_hole_north.cub: PARSE OK, VALIDATE FAIL
+maps/bad/wall_hole_south.cub: PARSE OK, VALIDATE FAIL
+maps/bad/wall_hole_west.cub: PARSE OK, VALIDATE FAIL
+maps/bad/wall_none.cub: PARSE OK, VALIDATE FAIL

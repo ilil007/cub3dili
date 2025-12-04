@@ -1,0 +1,46 @@
+=== GOOD MAPS ===
+maps/good/cheese_maze.cub: REJECTED
+maps/good/creepy.cub: REJECTED
+maps/good/dungeon.cub: REJECTED
+maps/good/library.cub: REJECTED
+maps/good/matrix.cub: REJECTED
+maps/good/sad_face.cub: REJECTED
+maps/good/square_map.cub: REJECTED
+maps/good/subject_map.cub: REJECTED
+maps/good/test_map.cub: REJECTED
+maps/good/test_map_hole.cub: REJECTED
+maps/good/test_pos_bottom.cub: REJECTED
+maps/good/test_pos_left.cub: REJECTED
+maps/good/test_pos_right.cub: REJECTED
+maps/good/test_pos_top.cub: REJECTED
+maps/good/test_textures.cub: REJECTED
+maps/good/test_whitespace.cub: REJECTED
+maps/good/works.cub: REJECTED
+
+=== BAD MAPS ===
+maps/bad/color_invalid_rgb.cub: REJECTED
+maps/bad/color_missing_ceiling_rgb.cub: REJECTED
+maps/bad/color_missing.cub: REJECTED
+maps/bad/color_missing_floor_rgb.cub: REJECTED
+maps/bad/color_none.cub: REJECTED
+maps/bad/empty.cub: REJECTED
+maps/bad/file_letter_end.cub: REJECTED
+maps/bad/map_first.cub: REJECTED
+maps/bad/map_middle.cub: REJECTED
+maps/bad/map_missing.cub: REJECTED
+maps/bad/map_only.cub: REJECTED
+maps/bad/map_too_small.cub: REJECTED
+maps/bad/player_multiple.cub: REJECTED
+maps/bad/player_none.cub: REJECTED
+maps/bad/player_on_edge.cub: REJECTED
+maps/bad/textures_dir.cub: REJECTED
+maps/bad/textures_duplicates.cub: REJECTED
+maps/bad/textures_invalid.cub: REJECTED
+maps/bad/textures_missing.cub: REJECTED
+maps/bad/textures_none.cub: REJECTED
+maps/bad/textures_not_xpm.cub: REJECTED
+maps/bad/wall_hole_east.cub: REJECTED
+maps/bad/wall_hole_north.cub: REJECTED
+maps/bad/wall_hole_south.cub: REJECTED
+maps/bad/wall_hole_west.cub: REJECTED
+maps/bad/wall_none.cub: REJECTED

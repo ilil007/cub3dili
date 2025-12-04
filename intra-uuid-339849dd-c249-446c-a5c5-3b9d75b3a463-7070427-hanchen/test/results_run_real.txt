@@ -1,0 +1,153 @@
+=== maps/good/cheese_maze.cub ===
+EXIT:0
+=== maps/good/creepy.cub ===
+EXIT:0
+=== maps/good/dungeon.cub ===
+EXIT:0
+=== maps/good/library.cub ===
+EXIT:0
+=== maps/good/matrix.cub ===
+EXIT:0
+=== maps/good/sad_face.cub ===
+EXIT:0
+=== maps/good/square_map.cub ===
+EXIT:0
+=== maps/good/subject_map.cub ===
+EXIT:0
+=== maps/good/test_map.cub ===
+EXIT:0
+=== maps/good/test_map_hole.cub ===
+EXIT:0
+=== maps/good/test_pos_bottom.cub ===
+EXIT:0
+=== maps/good/test_pos_left.cub ===
+EXIT:0
+=== maps/good/test_pos_right.cub ===
+EXIT:0
+=== maps/good/test_pos_top.cub ===
+EXIT:0
+=== maps/good/test_textures.cub ===
+EXIT:0
+=== maps/good/test_whitespace.cub ===
+EXIT:0
+OUT: Error
+OUT: Error
+OUT: Invalid map
+=== maps/good/works.cub ===
+EXIT:0
+OUT: Error
+OUT: Error
+OUT: Invalid map
+=== maps/bad/color_invalid_rgb.cub ===
+EXIT:0
+=== maps/bad/color_missing_ceiling_rgb.cub ===
+EXIT:0
+=== maps/bad/color_missing.cub ===
+EXIT:0
+=== maps/bad/color_missing_floor_rgb.cub ===
+EXIT:0
+=== maps/bad/color_none.cub ===
+EXIT:0
+=== maps/bad/empty.cub ===
+EXIT:0
+OUT: Error
+OUT: Error
+OUT: Failed to parse map
+=== maps/bad/file_letter_end.cub ===
+EXIT:0
+=== maps/bad/map_first.cub ===
+EXIT:0
+OUT: Error
+OUT: Failed to load textures
+OUT: Initializing MLX...
+OUT: MLX initialized: 1024x768
+=== maps/bad/map_middle.cub ===
+EXIT:0
+=== maps/bad/map_missing.cub ===
+EXIT:0
+OUT: Error
+OUT: Error
+OUT: Failed to parse map
+=== maps/bad/map_only.cub ===
+EXIT:0
+OUT: Error
+OUT: Failed to load textures
+OUT: Initializing MLX...
+OUT: MLX initialized: 1024x768
+=== maps/bad/map_too_small.cub ===
+EXIT:0
+OUT: Error
+OUT: Error
+OUT: Invalid map
+=== maps/bad/player_multiple.cub ===
+EXIT:0
+OUT: Error
+OUT: Error
+OUT: Invalid map
+=== maps/bad/player_none.cub ===
+EXIT:0
+OUT: Error
+OUT: Error
+OUT: Invalid map
+=== maps/bad/player_on_edge.cub ===
+EXIT:0
+OUT: Error
+OUT: Error
+OUT: Invalid map
+=== maps/bad/textures_dir.cub ===
+EXIT:0
+OUT: Error
+OUT: Failed to load textures
+OUT: Initializing MLX...
+OUT: MLX initialized: 1024x768
+=== maps/bad/textures_duplicates.cub ===
+EXIT:0
+=== maps/bad/textures_invalid.cub ===
+EXIT:0
+OUT: Error
+OUT: Failed to load textures
+OUT: Initializing MLX...
+OUT: MLX initialized: 1024x768
+=== maps/bad/textures_missing.cub ===
+EXIT:0
+OUT: Error
+OUT: Failed to load textures
+OUT: Initializing MLX...
+OUT: MLX initialized: 1024x768
+=== maps/bad/textures_none.cub ===
+EXIT:0
+OUT: Error
+OUT: Failed to load textures
+OUT: Initializing MLX...
+OUT: MLX initialized: 1024x768
+=== maps/bad/textures_not_xpm.cub ===
+EXIT:0
+OUT: Error
+OUT: Failed to load textures
+OUT: Initializing MLX...
+OUT: MLX initialized: 1024x768
+=== maps/bad/wall_hole_east.cub ===
+EXIT:0
+OUT: Error
+OUT: Error
+OUT: Invalid map
+=== maps/bad/wall_hole_north.cub ===
+EXIT:0
+OUT: Error
+OUT: Error
+OUT: Invalid map
+=== maps/bad/wall_hole_south.cub ===
+EXIT:0
+OUT: Error
+OUT: Error
+OUT: Invalid map
+=== maps/bad/wall_hole_west.cub ===
+EXIT:0
+OUT: Error
+OUT: Error
+OUT: Invalid map
+=== maps/bad/wall_none.cub ===
+EXIT:0
+OUT: Error
+OUT: Error
+OUT: Invalid map
